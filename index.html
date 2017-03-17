@@ -3,15 +3,19 @@
     <head>
 <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
 <script src="https://rawgit.com/protyze/aframe-alongpath-component/master/dist/aframe-alongpath-component.min.js"></script>
-</head>
+   </head>
+    
     <body>
-        <a-scene>
+       <a-scene>
+
         <a-sphere position="4 2 -4" color="#03A9F4" radius="1.25"
                alongpath="path: -7,1,-10 12,1,-4 20,1,10; closed: true; loop: true; inspect: false; dur: 20000;" >
         </a-sphere>
 
         <a-sphere position="-1.5 2 -8" color="#FFF" src="sky2.png" radius="2 3 2" wireframe="true">
           <a-animation attribute="rotation"
+          begin="click"
+          end="cursor-out"
           dur="15000"
           fill="forwards"
           to="0 360 0"
@@ -25,8 +29,8 @@
                        radius="2"
                        detail="1.5"
                        material="flatShading: true"
-
-                       ></a-tetrahedron>
+                       <a-animation attribute="material.color" from="#ff315c" to="#ff0002" dur="1000"></a-animation>
+        </a-tetrahedron>
 
         <a-sphere position="-3 2.5 -8" color="#FFF" src="sky2.png" radius="1" >
           <a-animation attribute="rotation"
@@ -39,8 +43,11 @@
 
         <a-sky src="sky2.png" ></a-sky>
 
-        <script type="text/javascript" src="scripts/app.js"></script>
+        <a-plane color="#ff002e" rotation="-90 0 0" position="0 0 0 "></a-plane>
 
+       <a-camera user-height="1.6" position="0 2 2" rotation="0 30 0">
+         <a-cursor color="#ff002e"/>
+       </a-camera>
         </a-scene>
     </body>
 
