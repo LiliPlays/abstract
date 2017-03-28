@@ -18,7 +18,7 @@
 
         <a-entity position="0 2.25 -15" particle-system="preset: dust"></a-entity>
 
-        <a-obj-model src="deer.obj" mtl="deer.mtl" scale="0.2 0.2 0.2" position="-11 0 -2" rotation="0 15 0"></a-obj-model>
+        <a-obj-model src="deer.obj" mtl="deer.mtl" scale="0.2 0.2 0.2" position="-11 0 -2" rotation="0 15 0" sound="src: crickets.mp3; on: click; loop: true;"></a-obj-model>
 
         <a-entity position="0 2.25 -15" particle-system="color: #EF0000,#44CC00"></a-entity>
 
@@ -104,8 +104,6 @@
        <a-camera user-height="1.8" position="0 2 2" rotation="0 30 0">
          <a-cursor color="#ff002e" fuse="true" fuse-timeout="10"/>
        </a-camera>
-
-       <a-sound src="crickets.mp3" autoplay="true" loop="true" position="0 0 0"></a-sound>
 
         </a-scene>
     </body>
