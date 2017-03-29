@@ -4,14 +4,21 @@
 <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
 <script src="alongpath.js"></script>
 <script src="particle_system.js"></script>
-<script src="https://unpkg.com/aframe-mountain-component@^0.3.2/aframe-mountain-component.min.js"></script>
    </head>
 
     <body>
        <a-scene>
 
-      <a-mountain color="red"></a-mountain>
-
+<a-obj-model src="dolphin.obj" mtl="dolphin.mtl" color="#ff0000" position="-3 8 0">
+       <a-animation attribute="rotation"
+       begin="500"
+       dur="15000"
+       fill="forwards"
+       to="45 360 0"
+       repeat="indefinite"
+       easing="linear"></a-animation>
+       </a-obj-model>
+           
       <a-sphere position="4 8 -4" color="#03A9F4" radius="1.25"
                alongpath="path: -7,4,-10 12,4,-4 20,4,10; closed: true; loop: true; inspect: true; dur: 20000;" >
         </a-sphere>
