@@ -4,12 +4,19 @@
 <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
 <script src="alongpath.js"></script>
 <script src="particle_system.js"></script>
+
    </head>
 
     <body>
        <a-scene>
 
-<a-obj-model src="dolphin.obj" mtl="dolphin.mtl" color="#ff0000" position="-3 8 0">
+        <a-entity position="0 2.25 -15" particle-system="preset: dust"></a-entity>
+
+        <a-entity position="0 0 -15" particle-system="color: #EF0000,#44CC00"></a-entity>
+
+       <a-sound src="crickets.mp3" autoplay="true" position="0 0 0" loop="true"></a-sound>
+
+       <a-obj-model src="dolphin.obj" mtl="dolphin.mtl" color="#ff0000" position="-3 8 0">
        <a-animation attribute="rotation"
        begin="500"
        dur="15000"
@@ -18,44 +25,47 @@
        repeat="indefinite"
        easing="linear"></a-animation>
        </a-obj-model>
-           
-      <a-sphere position="4 8 -4" color="#03A9F4" radius="1.25"
-               alongpath="path: -7,4,-10 12,4,-4 20,4,10; closed: true; loop: true; inspect: true; dur: 20000;" >
-        </a-sphere>
 
-        <a-entity position="0 2.25 -15" particle-system="preset: dust"></a-entity>
+       <a-obj-model src="campfire.obj" mtl="campfire.mtl"></a-obj-model>
 
-        <a-obj-model src="deer.obj" mtl="deer.mtl" scale="0.2 0.2 0.2" position="-11 0 -2" rotation="0 15 0" sound="src: crickets.mp3; on: click; loop: true;"></a-obj-model>
-
-        <a-entity position="0 2.25 -15" particle-system="color: #EF0000,#44CC00"></a-entity>
-
-        <a-sphere position="-1.5 6 -8" color="#FFF" src="sky2.png" radius="2 3 2" wireframe="true">
+        <a-sphere position="-1.5 25 4" color="#FFF" src="sky2.png" radius="2 3 2" wireframe="true">
           <a-animation attribute="rotation"
-          begin="click"
+          begin="500"
           dur="15000"
           fill="forwards"
           to="0 360 0"
-          repeat="3"
+          repeat="indefinite"
           easing="linear"></a-animation>
         </a-sphere>
 
-        <a-sphere position="2 6 -8" color="#FF25F2" src="sky2.png" radius="1 1 1">
+        <a-sphere position="-3 20 0" color="#FFF" src="sky2.png" radius="1" >
           <a-animation attribute="rotation"
-          begin="click"
+          dur="5000"
+          fill="forwards"
+          to="2"
+          repeat="indefinite"
+          easing="linear"></a-animation>
+        </a-sphere>
+
+        <a-sphere position="2 16 -8" color="#FF25F2" src="sky2.png" radius="3">
+          <a-animation begin="click" attribute="material.color" from="#FF25F2" to="#7CFFA0" dur="1000"></a-animation>
+          <a-animation attribute="rotation"
+          begin="500"
           dur="15000"
           fill="forwards"
           to="0 360 0"
-          repeat="3"
+          repeat="indefinite"
           easing="linear"></a-animation>
         </a-sphere>
 
-        <a-tetrahedron position="5 5 -19"
+        <a-tetrahedron position="32 5 16"
                        scale="-1.70 2.44 0.8"
                        color="#7CFFA0"
                        radius="2"
                        detail="1.3"
-                       material="flatShading: true">
-                       <a-animation begin="click" attribute="material.color" from="#7CFFA0" to="#F80EE2" dur="2000"></a-animation>
+                       material="flatShading: true; metalness: 0.5;"
+                       sound="src: tinsha.wav; on: click;" >
+                       <a-animation begin="click" attribute="material.color" from="#7CFFA0" to="#F80EE2" dur="1000"></a-animation>
         </a-tetrahedron>
 
         <a-tetrahedron position="11.7 5 -19"
@@ -63,8 +73,9 @@
                        color="#7CFFA0"
                        radius="2"
                        detail="1.3"
-                       material="flatShading: true">
-                       <a-animation begin="click" attribute="material.color" from="#7CFFA0" to="#F80EE2" dur="2000"></a-animation>
+                       material="flatShading: true; metalness: 0.5;"
+                       ound="src: gong-burmese.wav; on: click; loop: true;">
+                       <a-animation begin="click" attribute="material.color" from="#7CFFA0" to="#F80EE2" dur="1000"></a-animation>
         </a-tetrahedron>
 
         <a-tetrahedron position="18.5 5 -19"
@@ -73,7 +84,7 @@
                        material="opacity: 0.2"
                        radius="2"
                        detail="1.3"
-                       material="flatShading: true">
+                       material="flatShading: true; metalness: 0.5;">
                        <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
         </a-tetrahedron>
 
@@ -82,8 +93,10 @@
                        color="#7CFFA0"
                        radius="2"
                        detail="1.3"
-                       material="flatShading: true">
-                       <a-animation begin="click" attribute="material.color" from="#7CFFA0" to="#F80EE2" dur="2000"></a-animation>
+                       material="flatShading: true; wireframe: true; wireframeLinewidth: 4;">
+                       <a-animation begin="click" attribute="rotation" dur="15000" to="0 360 0"
+                       repeat="indefinite"
+                       easing="linear"></a-animation>
         </a-tetrahedron>
 
         <a-tetrahedron position="15.1 11.5 -19"
@@ -91,26 +104,93 @@
                        color="#7CFFA0"
                        radius="2"
                        detail="1.3"
-                       material="flatShading: true">
-                       <a-animation begin="click" attribute="material.color" from="#7CFFA0" to="#F80EE2" dur="2000"></a-animation>
+                       material="flatShading: true; metalness: 0.5;">
+                       <a-animation begin="click" attribute="material.color" from="#7CFFA0" to="#F80EE2" dur="1000"></a-animation>
         </a-tetrahedron>
 
-        <a-sphere position="-3 6 -8" color="#FFF" src="sky2.png" radius="1" >
-          <a-animation attribute="scale"
-          dur="5000"
-          fill="forwards"
-          to="2"
-          repeat="indefinite"
-          easing="linear"></a-animation>
+        <a-tetrahedron position="5 5 -19"
+                       scale="-1.70 2.44 0.8"
+                       color="#7CFFA0"
+                       radius="2"
+                       detail="1.3"
+                       material="flatShading: true; metalness: 0.5;"
+                       sound="src: tinsha.wav; on: click;" >
+                       <a-animation begin="click" attribute="material.color" from="#7CFFA0" to="#F80EE2" dur="1000"></a-animation>
+        </a-tetrahedron>
+
+        <a-tetrahedron position="-6 6 -21"
+                       scale="-1.70 2.44 0.8"
+                       rotation="0 42 0"
+                       color="#7CFFA0"
+                       radius="2"
+                       detail="1.3"
+                       material="flatShading: true; metalness: 0.5;"
+                       ound="src: gong-burmese.wav; on: click; loop: true;">
+                       <a-animation begin="click" attribute="material.color" from="#7CFFA0" to="#F80EE2" dur="1000"></a-animation>
+        </a-tetrahedron>
+
+        <a-tetrahedron position="-12.6 7.7 19"
+                       rotation="0 0 0"
+                       scale="-1.70 2.44 0.8"
+                       color="#7CFFA0"
+                       material="opacity: 0.2"
+                       radius="2"
+                       detail="1.3"
+                       material="flatShading: true; metalness: 0.5;">
+                       <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+        </a-tetrahedron>
+
+        <a-tetrahedron position="-36 10 -11"
+                       rotation="0 60 0"
+                       scale="-2.77 4.38 3.25"
+                       color="#7CFFA0"
+                       radius="2"
+                       detail="1.3"
+                       material="flatShading: true; wireframe: true; wireframeLinewidth: 4;">
+                       <a-animation begin="click" attribute="rotation" dur="15000" to="0 360 0"
+                       repeat="indefinite"
+                       easing="linear"></a-animation>
+        </a-tetrahedron>
+
+        <a-sphere position="-37.12 9.9 -11.5"
+                       radius="1"
+                       color="#F80EE2"
+                       detail="1.3"
+                       material="src: sky2.png">
+                       <a-animation begin="0" attribute="rotation" dur="15000" to="0 360 0"
+                       repeat="indefinite"
+                       easing="linear"></a-animation>
+        </a-sphere>
+
+        <a-tetrahedron position="-16.4 11.5 -21"
+                       rotation="0 60 0"
+                       scale="-1.70 2.44 0.8"
+                       color="#7CFFA0"
+                       radius="2"
+                       detail="1.3"
+                       material="flatShading: true; metalness: 0.5;">
+                       <a-animation begin="click" attribute="material.color" from="#7CFFA0" to="#F80EE2" dur="1000"></a-animation>
+        </a-tetrahedron>
+
+        <a-sphere position="8.3 11.5 -19"
+                       radius="1"
+                       color="#F80EE2"
+                       detail="1.3"
+                       material="src: sky2.png">
+                       <a-animation begin="0" attribute="rotation" dur="15000" to="0 360 0"
+                       repeat="indefinite"
+                       easing="linear"></a-animation>
         </a-sphere>
 
         <a-sky src="sky1.jpg" color="#2E3194"></a-sky>
 
-        <a-plane color="#000000" rotation="-90 0 0" position="0 0 0 " width="1000" height="1000"></a-plane>
+        <a-plane color="#2E3194" material="src: sand.jpg; repeat: 50 50 50;" rotation="-90 0 0" position="0 0 0 " width="1000" height="1000"></a-plane>
 
        <a-camera user-height="1.8" position="0 2 2" rotation="0 30 0">
          <a-cursor color="#ff002e" fuse="true" fuse-timeout="10"/>
        </a-camera>
+
+
 
         </a-scene>
     </body>
