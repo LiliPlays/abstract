@@ -4,7 +4,6 @@
 <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
 <script src="https://rawgit.com/protyze/aframe-alongpath-component/master/dist/aframe-alongpath-component.min.js"></script>
 <script src="particle_system.js"></script>
-
    </head>
 
     <body>
@@ -12,7 +11,15 @@
 
         <a-entity position="0 2.25 -15" particle-system="preset: dust"></a-entity>
 
-        <a-collada-model src="delphin.dae" position="88 -16 -22" rotation="-32 -17 -29" scale="5 5 5"></a-collada-model>
+        <a-collada-model src="delphin.dae" position="-65 12 88" rotation="-32 -17 -29" scale="5 5 5">
+          <a-animation attribute="rotation"
+          begin="500"
+          dur="30000"
+          fill="forwards"
+          to="0 360 0"
+          repeat="indefinite"
+          easing="linear"></a-animation>
+        </a-collada-model>
 
         <a-collada-model src="ele1.dae" position="-40 0 13" scale="3 3 3">
           <a-animation attribute="rotation"
@@ -31,6 +38,12 @@
            fill="forwards"
            to="0 360 0"
            repeat="indefinite"
+           easing="linear"></a-animation>
+           <a-animation attribute="position"
+           begin="click"
+           dur="10000"
+           fill="forwards"
+           to="-70 30 -56"
            easing="linear"></a-animation>
           </a-collada-model>
 
@@ -80,7 +93,7 @@
 
         <a-tetrahedron position="11.7 5 -19"
                        scale="-1.70 2.44 0.8"
-                       color="#7CFFA0"
+                       src="pat1.png"
                        radius="2"
                        detail="1.3"
                        material="flatShading: true; metalness: 0.5;"
@@ -142,10 +155,10 @@
 
 
         <a-icosahedron position="-67 11 91"
-                       material="opacity: 0.4"
+                       src="pat1.png"
                        rotation="0 0 0"
                        scale="8 8 8"
-                       color="#6000E2"
+
                        radius="2"
                        detail="1.3"
                        material="flatShading: true; metalness: 0.5;"
@@ -201,6 +214,7 @@
                        rotation="0 60 0"
                        scale="-1.70 2.44 0.8"
                        color="#7CFFA0"
+                       src="pat1.png"
                        radius="2"
                        detail="1.3"
                        material="flatShading: true; metalness: 0.5;">
@@ -221,6 +235,9 @@
 
         <a-plane color="#2E3194" material="src: sand.jpg; repeat: 50 50 50;" rotation="-90 0 0" position="0 0 0 " width="1000" height="1000"></a-plane>
 
+        <a-camera user-height="1.8" position="0 2 2" rotation="0 120 0">
+          <a-cursor color="#ffffff" fuse="true" fuse-timeout="10"/>
+        </a-camera>
 
 //MALEN ANFANG!!!
 
@@ -789,7 +806,7 @@
 
         <a-sphere position="-10 1 45"
                        radius="1"
-                       color="#7CFFA0"
+                       color="#5A00FF"
                        material="opacity: 0.1"
                        material="metalness: 0.5;">
                        <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
@@ -797,7 +814,7 @@
 
         <a-sphere position="-8 1 45"
                        radius="1"
-                       color="#7CFFA0"
+                       src="pat1.png"
                        material="opacity: 0.1"
                        material="metalness: 0.5;">
                        <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
@@ -805,7 +822,7 @@
 
         <a-sphere position="-6 1 45"
                        radius="1"
-                       color="#7CFFA0"
+                       color="#5A00FF"
                        material="opacity: 0.1"
                        material="metalness: 0.5;">
                        <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
@@ -813,7 +830,7 @@
 
         <a-sphere position="-4 1 45"
                        radius="1"
-                       color="#7CFFA0"
+                       color="#5A00FF"
                        material="opacity: 0.1"
                        material="metalness: 0.5;">
                        <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
@@ -821,7 +838,7 @@
 
         <a-sphere position="-2 1 45"
                        radius="1"
-                       color="#7CFFA0"
+                       src="pat1.png"
                        material="opacity: 0.1"
                        material="metalness: 0.5;">
                        <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
@@ -829,7 +846,7 @@
 
         <a-sphere position="0 1 45"
                        radius="1"
-                       color="#7CFFA0"
+                       src="pat1.png"
                        material="opacity: 0.1"
                        material="metalness: 0.5;">
                        <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
@@ -837,7 +854,7 @@
 
         <a-sphere position="2 1 45"
                        radius="1"
-                       color="#7CFFA0"
+                       color="#5A00FF"
                        material="opacity: 0.1"
                        material="metalness: 0.5;">
                        <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
@@ -845,7 +862,7 @@
 
         <a-sphere position="4 1 45"
                        radius="1"
-                       color="#7CFFA0"
+                       src="pat1.png"
                        material="opacity: 0.1"
                        material="metalness: 0.5;">
                        <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
@@ -853,7 +870,7 @@
 
         <a-sphere position="6 1 45"
                        radius="1"
-                       color="#7CFFA0"
+                       src="pat1.png"
                        material="opacity: 0.1"
                        material="metalness: 0.5;">
                        <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
@@ -861,7 +878,7 @@
 
                 <a-sphere position="8 1 45"
                                radius="1"
-                               color="#7CFFA0"
+                               color="#5A00FF"
                                material="opacity: 0.1"
                                material="metalness: 0.5;">
                                <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
@@ -869,7 +886,7 @@
 
                 <a-sphere position="10 1 45"
                                radius="1"
-                               color="#7CFFA0"
+                               src="pat1.png"
                                material="opacity: 0.1"
                                material="metalness: 0.5;">
                                <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
@@ -877,7 +894,7 @@
 
                 <a-sphere position="12 1 45"
                                radius="1"
-                               color="#7CFFA0"
+                               color="#5A00FF"
                                material="opacity: 0.1"
                                material="metalness: 0.5;">
                                <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
@@ -885,7 +902,7 @@
 
                 <a-sphere position="14 1 45"
                                radius="1"
-                               color="#7CFFA0"
+                               src="pat1.png"
                                material="opacity: 0.1"
                                material="metalness: 0.5;">
                                <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
@@ -893,7 +910,7 @@
 
                 <a-sphere position="16 1 45"
                                radius="1"
-                               color="#7CFFA0"
+                               color="#5A00FF"
                                material="opacity: 0.1"
                                material="metalness: 0.5;">
                                <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
@@ -901,7 +918,7 @@
 
                 <a-sphere position="18 1 45"
                                radius="1"
-                               color="#7CFFA0"
+                               src="pat1.png"
                                material="opacity: 0.1"
                                material="metalness: 0.5;">
                                <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
@@ -909,15 +926,526 @@
 
                 <a-sphere position="20 1 45"
                                radius="1"
-                               color="#7CFFA0"
+                               src="pat1.png"
+                               material="opacity: 0.1"
+                               material="metalness: 0.5;">
+                               <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                </a-sphere>
+//next
+                <a-sphere position="-10 3 45"
+                               radius="1"
+                               color="#5A00FF"
                                material="opacity: 0.1"
                                material="metalness: 0.5;">
                                <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
                 </a-sphere>
 
-       <a-camera user-height="1.8" position="0 2 2" rotation="0 120 0">
-         <a-cursor color="#ffffff" fuse="true" fuse-timeout="10"/>
-       </a-camera>
+                <a-sphere position="-8 3 45"
+                               radius="1"
+                               src="pat1.png"
+                               material="opacity: 0.1"
+                               material="metalness: 0.5;">
+                               <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                </a-sphere>
+
+                <a-sphere position="-6 3 45"
+                               radius="1"
+                               color="#5A00FF"
+                               material="opacity: 0.1"
+                               material="metalness: 0.5;">
+                               <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                </a-sphere>
+
+                <a-sphere position="-4 3 45"
+                               radius="1"
+                               color="#5A00FF"
+                               material="opacity: 0.1"
+                               material="metalness: 0.5;">
+                               <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                </a-sphere>
+
+                <a-sphere position="-2 3 45"
+                               radius="1"
+                               color="#5A00FF"
+                               material="opacity: 0.1"
+                               material="metalness: 0.5;">
+                               <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                </a-sphere>
+
+                <a-sphere position="0 3 45"
+                               radius="1"
+                               src="pat1.png"
+                               material="opacity: 0.1"
+                               material="metalness: 0.5;">
+                               <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                </a-sphere>
+
+                <a-sphere position="2 3 45"
+                               radius="1"
+                               color="#5A00FF"
+                               material="opacity: 0.1"
+                               material="metalness: 0.5;">
+                               <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                </a-sphere>
+
+                <a-sphere position="4 3 45"
+                               radius="1"
+                               color="#5A00FF"
+                               material="opacity: 0.1"
+                               material="metalness: 0.5;">
+                               <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                </a-sphere>
+
+                <a-sphere position="6 3 45"
+                               radius="1"
+                               src="pat1.png"
+                               material="opacity: 0.1"
+                               material="metalness: 0.5;">
+                               <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                </a-sphere>
+
+                        <a-sphere position="8 3 45"
+                                       radius="1"
+                                       color="#5A00FF"
+                                       material="opacity: 0.1"
+                                       material="metalness: 0.5;">
+                                       <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                        </a-sphere>
+
+                        <a-sphere position="10 3 45"
+                                       radius="1"
+                                       src="pat1.png"
+                                       material="opacity: 0.1"
+                                       material="metalness: 0.5;">
+                                       <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                        </a-sphere>
+
+                        <a-sphere position="12 3 45"
+                                       radius="1"
+                                       src="pat1.png"
+                                       material="opacity: 0.1"
+                                       material="metalness: 0.5;">
+                                       <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                        </a-sphere>
+
+                        <a-sphere position="14 3 45"
+                                       radius="1"
+                                       src="pat1.png"
+                                       material="opacity: 0.1"
+                                       material="metalness: 0.5;">
+                                       <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                        </a-sphere>
+
+                        <a-sphere position="16 3 45"
+                                       radius="1"
+                                       color="#5A00FF"
+                                       material="opacity: 0.1"
+                                       material="metalness: 0.5;">
+                                       <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                        </a-sphere>
+
+                        <a-sphere position="18 3 45"
+                                       radius="1"
+                                       src="pat1.png"
+                                       material="opacity: 0.1"
+                                       material="metalness: 0.5;">
+                                       <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                        </a-sphere>
+
+                        <a-sphere position="20 3 45"
+                                       radius="1"
+                                       color="#5A00FF"
+                                       material="opacity: 0.1"
+                                       material="metalness: 0.5;">
+                                       <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                        </a-sphere>
+
+//next
+                                        <a-sphere position="-10 5 45"
+                                                       radius="1"
+                                                       color="#5A00FF"
+                                                       material="opacity: 0.1"
+                                                       material="metalness: 0.5;">
+                                                       <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                                        </a-sphere>
+
+                                        <a-sphere position="-8 5 45"
+                                                       radius="1"
+                                                       src="pat1.png"
+                                                       material="opacity: 0.1"
+                                                       material="metalness: 0.5;">
+                                                       <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                                        </a-sphere>
+
+                                        <a-sphere position="-6 5 45"
+                                                       radius="1"
+                                                       color="#5A00FF"
+                                                       material="opacity: 0.1"
+                                                       material="metalness: 0.5;">
+                                                       <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                                        </a-sphere>
+
+                                        <a-sphere position="-4 5 45"
+                                                       radius="1"
+                                                       color="#5A00FF"
+                                                       material="opacity: 0.1"
+                                                       material="metalness: 0.5;">
+                                                       <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                                        </a-sphere>
+
+                                        <a-sphere position="-2 5 45"
+                                                       radius="1"
+                                                       src="pat1.png"
+                                                       material="opacity: 0.1"
+                                                       material="metalness: 0.5;">
+                                                       <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                                        </a-sphere>
+
+                                        <a-sphere position="0 5 45"
+                                                       radius="1"
+                                                       src="pat1.png"
+                                                       material="opacity: 0.1"
+                                                       material="metalness: 0.5;">
+                                                       <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                                        </a-sphere>
+
+                                        <a-sphere position="2 5 45"
+                                                       radius="1"
+                                                       color="#5A00FF"
+                                                       material="opacity: 0.1"
+                                                       material="metalness: 0.5;">
+                                                       <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                                        </a-sphere>
+
+                                        <a-sphere position="4 5 45"
+                                                       radius="1"
+                                                       src="pat1.png"
+                                                       material="opacity: 0.1"
+                                                       material="metalness: 0.5;">
+                                                       <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                                        </a-sphere>
+
+                                        <a-sphere position="6 5 45"
+                                                       radius="1"
+                                                       src="pat1.png"
+                                                       material="opacity: 0.1"
+                                                       material="metalness: 0.5;">
+                                                       <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                                        </a-sphere>
+
+                                                <a-sphere position="8 5 45"
+                                                               radius="1"
+                                                               color="#5A00FF"
+                                                               material="opacity: 0.1"
+                                                               material="metalness: 0.5;">
+                                                               <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                                                </a-sphere>
+
+                                                <a-sphere position="10 5 45"
+                                                               radius="1"
+                                                               src="pat1.png"
+                                                               material="opacity: 0.1"
+                                                               material="metalness: 0.5;">
+                                                               <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                                                </a-sphere>
+
+                                                <a-sphere position="12 5 45"
+                                                               radius="1"
+                                                               color="#5A00FF"
+                                                               material="opacity: 0.1"
+                                                               material="metalness: 0.5;">
+                                                               <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                                                </a-sphere>
+
+                                                <a-sphere position="14 5 45"
+                                                               radius="1"
+                                                               src="pat1.png"
+                                                               material="opacity: 0.1"
+                                                               material="metalness: 0.5;">
+                                                               <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                                                </a-sphere>
+
+                                                <a-sphere position="16 5 45"
+                                                               radius="1"
+                                                               color="#5A00FF"
+                                                               material="opacity: 0.1"
+                                                               material="metalness: 0.5;">
+                                                               <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                                                </a-sphere>
+
+                                                <a-sphere position="18 5 45"
+                                                               radius="1"
+                                                               src="pat1.png"
+                                                               material="opacity: 0.1"
+                                                               material="metalness: 0.5;">
+                                                               <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                                                </a-sphere>
+
+                                                <a-sphere position="20 5 45"
+                                                               radius="1"
+                                                               src="pat1.png"
+                                                               material="opacity: 0.1"
+                                                               material="metalness: 0.5;">
+                                                               <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                                                </a-sphere>
+//next
+                                                                                        <a-sphere position="-10 7 45"
+                                                                                                       radius="1"
+                                                                                                       color="#5A00FF"
+                                                                                                       material="opacity: 0.1"
+                                                                                                       material="metalness: 0.5;">
+                                                                                                       <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                                                                                        </a-sphere>
+
+                                                                                        <a-sphere position="-8 7 45"
+                                                                                                       radius="1"
+                                                                                                       src="pat1.png"
+                                                                                                       material="opacity: 0.1"
+                                                                                                       material="metalness: 0.5;">
+                                                                                                       <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                                                                                        </a-sphere>
+
+                                                                                        <a-sphere position="-6 7 45"
+                                                                                                       radius="1"
+                                                                                                       color="#5A00FF"
+                                                                                                       material="opacity: 0.1"
+                                                                                                       material="metalness: 0.5;">
+                                                                                                       <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                                                                                        </a-sphere>
+
+                                                                                        <a-sphere position="-4 7 45"
+                                                                                                       radius="1"
+                                                                                                       color="#5A00FF"
+                                                                                                       material="opacity: 0.1"
+                                                                                                       material="metalness: 0.5;">
+                                                                                                       <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                                                                                        </a-sphere>
+
+                                                                                        <a-sphere position="-2 7 45"
+                                                                                                       radius="1"
+                                                                                                       color="#5A00FF"
+                                                                                                       material="opacity: 0.1"
+                                                                                                       material="metalness: 0.5;">
+                                                                                                       <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                                                                                        </a-sphere>
+
+                                                                                        <a-sphere position="0 7 45"
+                                                                                                       radius="1"
+                                                                                                       src="pat1.png"
+                                                                                                       material="opacity: 0.1"
+                                                                                                       material="metalness: 0.5;">
+                                                                                                       <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                                                                                        </a-sphere>
+
+                                                                                        <a-sphere position="2 7 45"
+                                                                                                       radius="1"
+                                                                                                       color="#5A00FF"
+                                                                                                       material="opacity: 0.1"
+                                                                                                       material="metalness: 0.5;">
+                                                                                                       <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                                                                                        </a-sphere>
+
+                                                                                        <a-sphere position="4 7 45"
+                                                                                                       radius="1"
+                                                                                                       color="#5A00FF"
+                                                                                                       material="opacity: 0.1"
+                                                                                                       material="metalness: 0.5;">
+                                                                                                       <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                                                                                        </a-sphere>
+
+                                                                                        <a-sphere position="6 7 45"
+                                                                                                       radius="1"
+                                                                                                       src="pat1.png"
+                                                                                                       material="opacity: 0.1"
+                                                                                                       material="metalness: 0.5;">
+                                                                                                       <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                                                                                        </a-sphere>
+
+                                                                                                <a-sphere position="8 7 45"
+                                                                                                               radius="1"
+                                                                                                               color="#5A00FF"
+                                                                                                               material="opacity: 0.1"
+                                                                                                               material="metalness: 0.5;">
+                                                                                                               <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                                                                                                </a-sphere>
+
+                                                                                                <a-sphere position="10 7 45"
+                                                                                                               radius="1"
+                                                                                                               src="pat1.png"
+                                                                                                               material="opacity: 0.1"
+                                                                                                               material="metalness: 0.5;">
+                                                                                                               <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                                                                                                </a-sphere>
+
+                                                                                                <a-sphere position="12 7 45"
+                                                                                                               radius="1"
+                                                                                                               color="#5A00FF"
+                                                                                                               material="opacity: 0.1"
+                                                                                                               material="metalness: 0.5;">
+                                                                                                               <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                                                                                                </a-sphere>
+
+                                                                                                <a-sphere position="14 7 45"
+                                                                                                               radius="1"
+                                                                                                               src="pat1.png"
+                                                                                                               material="opacity: 0.1"
+                                                                                                               material="metalness: 0.5;">
+                                                                                                               <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                                                                                                </a-sphere>
+
+                                                                                                <a-sphere position="16 7 45"
+                                                                                                               radius="1"
+                                                                                                               color="#5A00FF"
+                                                                                                               material="opacity: 0.1"
+                                                                                                               material="metalness: 0.5;">
+                                                                                                               <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                                                                                                </a-sphere>
+
+                                                                                                <a-sphere position="18 7 45"
+                                                                                                               radius="1"
+                                                                                                               color="#5A00FF"
+                                                                                                               material="opacity: 0.1"
+                                                                                                               material="metalness: 0.5;">
+                                                                                                               <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                                                                                                </a-sphere>
+
+                                                                                                <a-sphere position="20 7 45"
+                                                                                                               radius="1"
+                                                                                                               src="pat1.png"
+                                                                                                               material="opacity: 0.1"
+                                                                                                               material="metalness: 0.5;">
+                                                                                                               <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                                                                                                </a-sphere>
+
+//next
+                                                                                                                                        <a-sphere position="-10 9 45"
+                                                                                                                                                       radius="1"
+                                                                                                                                                       src="pat1.png"
+                                                                                                                                                       material="opacity: 0.1"
+                                                                                                                                                       material="metalness: 0.5;">
+                                                                                                                                                       <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                                                                                                                                        </a-sphere>
+
+                                                                                                                                        <a-sphere position="-8 9 45"
+                                                                                                                                                       radius="1"
+                                                                                                                                                       src="pat1.png"
+                                                                                                                                                       material="opacity: 0.1"
+                                                                                                                                                       material="metalness: 0.5;">
+                                                                                                                                                       <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                                                                                                                                        </a-sphere>
+
+                                                                                                                                        <a-sphere position="-6 9 45"
+                                                                                                                                                       radius="1"
+                                                                                                                                                       src="pat1.png"
+                                                                                                                                                       material="opacity: 0.1"
+                                                                                                                                                       material="metalness: 0.5;">
+                                                                                                                                                       <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                                                                                                                                        </a-sphere>
+
+                                                                                                                                        <a-sphere position="-4 9 45"
+                                                                                                                                                       radius="1"
+                                                                                                                                                       color="#5A00FF"
+                                                                                                                                                       material="opacity: 0.1"
+                                                                                                                                                       material="metalness: 0.5;">
+                                                                                                                                                       <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                                                                                                                                        </a-sphere>
+
+                                                                                                                                        <a-sphere position="-2 9 45"
+                                                                                                                                                       radius="1"
+                                                                                                                                                       src="pat1.png"
+                                                                                                                                                       material="opacity: 0.1"
+                                                                                                                                                       material="metalness: 0.5;">
+                                                                                                                                                       <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                                                                                                                                        </a-sphere>
+
+                                                                                                                                        <a-sphere position="0 9 45"
+                                                                                                                                                       radius="1"
+                                                                                                                                                       src="pat1.png"
+                                                                                                                                                       material="opacity: 0.1"
+                                                                                                                                                       material="metalness: 0.5;">
+                                                                                                                                                       <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                                                                                                                                        </a-sphere>
+
+                                                                                                                                        <a-sphere position="2 9 45"
+                                                                                                                                                       radius="1"
+                                                                                                                                                       color="#5A00FF"
+                                                                                                                                                       material="opacity: 0.1"
+                                                                                                                                                       material="metalness: 0.5;">
+                                                                                                                                                       <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                                                                                                                                        </a-sphere>
+
+                                                                                                                                        <a-sphere position="4 9 45"
+                                                                                                                                                       radius="1"
+                                                                                                                                                       src="pat1.png"
+                                                                                                                                                       material="opacity: 0.1"
+                                                                                                                                                       material="metalness: 0.5;">
+                                                                                                                                                       <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                                                                                                                                        </a-sphere>
+
+                                                                                                                                        <a-sphere position="6 9 45"
+                                                                                                                                                       radius="1"
+                                                                                                                                                       src="pat1.png"
+                                                                                                                                                       material="opacity: 0.1"
+                                                                                                                                                       material="metalness: 0.5;">
+                                                                                                                                                       <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                                                                                                                                        </a-sphere>
+
+                                                                                                                                                <a-sphere position="8 9 45"
+                                                                                                                                                               radius="1"
+                                                                                                                                                               color="#5A00FF"
+                                                                                                                                                               material="opacity: 0.1"
+                                                                                                                                                               material="metalness: 0.5;">
+                                                                                                                                                               <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                                                                                                                                                </a-sphere>
+
+                                                                                                                                                <a-sphere position="10 9 45"
+                                                                                                                                                               radius="1"
+                                                                                                                                                               src="pat1.png"
+                                                                                                                                                               material="opacity: 0.1"
+                                                                                                                                                               material="metalness: 0.5;">
+                                                                                                                                                               <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                                                                                                                                                </a-sphere>
+
+                                                                                                                                                <a-sphere position="12 9 45"
+                                                                                                                                                               radius="1"
+                                                                                                                                                               color="#5A00FF"
+                                                                                                                                                               material="opacity: 0.1"
+                                                                                                                                                               material="metalness: 0.5;">
+                                                                                                                                                               <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                                                                                                                                                </a-sphere>
+
+                                                                                                                                                <a-sphere position="14 9 45"
+                                                                                                                                                               radius="1"
+                                                                                                                                                               src="pat1.png"
+                                                                                                                                                               material="opacity: 0.1"
+                                                                                                                                                               material="metalness: 0.5;">
+                                                                                                                                                               <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                                                                                                                                                </a-sphere>
+
+                                                                                                                                                <a-sphere position="16 9 45"
+                                                                                                                                                               radius="1"
+                                                                                                                                                               color="#5A00FF"
+                                                                                                                                                               material="opacity: 0.1"
+                                                                                                                                                               material="metalness: 0.5;">
+                                                                                                                                                               <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                                                                                                                                                </a-sphere>
+
+                                                                                                                                                <a-sphere position="18 9 45"
+                                                                                                                                                               radius="1"
+                                                                                                                                                               src="pat1.png"
+                                                                                                                                                               material="opacity: 0.1"
+                                                                                                                                                               material="metalness: 0.5;">
+                                                                                                                                                               <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                                                                                                                                                </a-sphere>
+
+                                                                                                                                                <a-sphere position="20 9 45"
+                                                                                                                                                               radius="1"
+                                                                                                                                                               src="pat1.png"
+                                                                                                                                                               material="opacity: 0.1"
+                                                                                                                                                               material="metalness: 0.5;">
+                                                                                                                                                               <a-animation begin="click" attribute="material.opacity" to="1"></a-animation>
+                                                                                                                                                </a-sphere>
+
 
         </a-scene>
     </body>
